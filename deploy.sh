@@ -85,7 +85,7 @@ TELEGRAM_BOT_TOKEN=8988171225:AAGJDA172tE9bzMyRDf0Uxg93yN2ndT8vBI
 EOF
 
 cat <<EOF > $PROJECT_DIR/frontend/.env.local
-NEXT_PUBLIC_API_URL=http://$SERVER_IP/api
+NEXT_PUBLIC_API_URL=/api
 EOF
 print_status "Environment variables generated"
 
