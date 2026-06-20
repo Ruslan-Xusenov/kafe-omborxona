@@ -92,11 +92,9 @@ print_status "Environment variables generated"
 echo ""
 echo "6. Starting Docker Containers..."
 cd $PROJECT_DIR
-# Stop the nginx docker container if it exists so it doesn't conflict with host nginx
-sed -i '/nginx:/,/pgdata:/d' docker-compose.yml || true
 docker-compose down
-docker-compose build
-docker-compose up -d
+docker-compose build db backend frontend
+docker-compose up -d db backend frontend
 print_status "Containers are running"
 
 echo ""
